@@ -1,9 +1,9 @@
 ---
-title: "XXXXX"
+title: "What is going on in undergraduate Bayesian education across the pond?"
 author: "Mine Dogucu <br> University of California Irvine"
-date: "XXXXX"
-subtitle: "Talk at XXXX"
-footer: "mdogucu.github.io/XXXX"
+date: "2024-03-27"
+subtitle: "Talk at  Royal Statical Society Teaching Statistics SIG event at TALMO"
+footer: "mdogucu.github.io/talmo-24"
 format: 
   revealjs:
     slide-number: true
@@ -11,11 +11,605 @@ format:
     theme: ["style.scss"]
 ---
 
-## Slides
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(bayesrules)
+```
+
+## Outline
+
+- Why?
+- Research Study
+- Recommendations
+- Example 
+- Resources
+
+# Why?
+
+## p-values
+
+. . . 
+
+Q: Why do so many colleges and grad schools teach p = 0.05?
+
+A: Because that's still what the scientific community and journal editors use.
+
+. . . 
+
+Q: Why do so many people still use p = 0.05?
+
+A: Because that's what they were taught in college or grad school.
+
+George Cobb as quoted in [The ASA's Statement on p-Values: Context, Process, and Purpose](https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108)
+
+## 
+
+"In 1985 only about 10% of JASA Applications and Case Studies articles used Bayesian methods.
+
+. . .
+
+In 2022 plus half of 2023, that percentage has changed.
+It is now 49%."
+
+
+
+Jeff Witmer, _To Bayes or Not to Bayes --
+Is There Any Question?_ Talk at Joint Statistical Meetings, 2023
+
+##
+
+- intuitive
+
+. . .
+
+- draws a more complete picture of statistics from both philosophical and application perspectives
+
+. . .
+
+- prepares students for their future career
+
+. . . 
+
+- statistics and computing can be taught in a harmonious way
+
+
+
+## Examples
+
+Witmer, J. (2017), [Bayes and MCMC for Undergraduates](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1305289), The American Statistician, 71, 259–264. DOI: 10.1080/00031305.2017.1305289.
+
+. . .
+
+Hu, J. (2020), [A Bayesian Statistics Course for Undergraduates: Bayesian Thinking, Computing, and Research,](https://www.tandfonline.com/doi/full/10.1080/10691898.2020.1817815) Journal of Statistics Education, 28, 229–235. 
+
+. . .
+
+Hoegh, A. (2020), [Why Bayesian Ideas Should be Introduced in the Statistics Curricula and How to do so](https://www.tandfonline.com/doi/full/10.1080/10691898.2020.1841591) Journal of Statistics Education, 28, 222–228. DOI: 10.1080/10691898.2020.1841591. 
+
+. . .
+
+Hu, J., and Dogucu, M. (2022), [Content and Computing Outline of Two Undergraduate Bayesian Courses: Tools, Examples, and Recommendations,](https://onlinelibrary.wiley.com/doi/10.1002/sta4.452) Stat, 11, e452. DOI: 10.1002/sta4.452. 
+
+
+# Research
+
+[Dogucu, M. & Hu, J. (2022) The Current State of Undergraduate Bayesian Education and Recommendations for the Future. The American Statistician, 74(2), 405-413.](https://www.tandfonline.com/doi/full/10.1080/00031305.2022.2089232)
+
+The authors gratefully acknowledge data collection support of Feiyi Sun.
+
+
+
+## 
+<br>
+<br>
+
+:::{.font50}
+We wanted to know **how commonly Bayesian statistics is taught** at the undergraduate level as a course and **how it is taught**. 
+:::
+
+## Methods
+
+- We collected data on all universities with a ranking of 100 or higher (i.e., better ranking) and liberal arts colleges with a ranking of 50 or higher based on U.S. News rankings
+
+- We searched the word “Bayesian” in course catalogs of the selected institutions spanning two academic years, from Fall 2019 to Summer 2021.
+
+- We only tracked courses that contain the word “Bayesian” in the title of the course.
+
+## Data
+
+- the department the Bayesian course is offered
+
+- whether the course is cross-listed for undergraduate and graduate enrollment
+
+- whether it is part of any major as an elective or a required course. 
+
+- prerequisites
+
+- course content (as seen in syllabi)
+
+# Results
+
+## 
+
+Among the 152 high-ranking institutions, we identified 46 institutions that offer a Bayesian course. 
+
+. . .
+
+In total, we have identified 51 Bayesian courses and note that 5 universities have two Bayesian courses.
+
+. . .
+
+Breaking down by institution type, it is 12% of the colleges (6 out of 50) and 39% of the universities (40 out of 102), respectively. 
+
+. . .
+
+Of the 45 courses offered at universities, 60% are cross-listed between undergraduate and graduate programs.
+
+## Departments
+
+- 51% are offered in statistics departments
+- 7.8% in computer science departments
+- 2% in math departments
+
+. . .
+
+There are also many departments which are at the intersection of statistics, mathematics, computer science, and/or data science. These departments offer 17.6% of the identified Bayesian courses. 
+
+. . .
+
+The remaining 21.6% courses are taught in various departments such as physics, psychology, ecology, evolution and marine biology and two of which were cross-listed between multiple departments.
+
+## Majors
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("img/majors.png")
+```
+
+## Prerequisites
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("img/prereq.jpeg")
+```
+
+## Prerequisites - Math
+
+- 43% of the 51 Bayesian courses have three calculus courses as prerequisites
+
+- 29% require two calculus courses
+
+- 10% require one calculus course
+
+- 16% do not require calculus courses at all. 
+
+. . .
+
+37% courses require linear algebra
+
+
+## Prerequisites - Computing
+
+While 33% of the 51 Bayesian courses mention some sort of computing prerequisite, not all of these mentions are prerequisite courses. 
+
+. . .
+
+Courses: introductory computer programming courses, statistical computing, R for data science, data science with R, R programming, data structures, computational thinking and doing, SAS programming.
+
+. . .
+
+Some mention a computing software. e.g.,  “R recommended,” “familiarity with R,” “basics of R programming required,” “some acquaintance with fundamentals of computer programming,” “familiarity with some programming language or numerical computing environment.”
+
+
+## Prerequisites - Probability and Statistics
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("img/prereq-stats.png")
+```
+
+## Content
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("img/content.png")
+```
+
+## Textbooks
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("img/textbooks.png")
+
+```
+
+
+# Recommendations
+
+# Expand  the  Access  to  Bayesian Courses
+
+. . .
+
+- Offer an undergraduate course in Bayesian statistics.
+
+- Reduce the number of prerequisites. 
+
+- Include Bayesian modules as part of existing courses.
+
+# Make Bayesian Courses a Part of the Majors
+
+- Consider making the Bayesian course required for statistics and data science majors. 
+
+- If the Bayesian course is an elective, then make it a highly recommended elective.
+
+- Consider making the Bayesian course an elective for majors beyond the statistical, mathematical, and computational sciences. 
+
+# Balance Statistics with Computing
+
+- Introduce simulation-based learning early in the course. 
+
+- Encourage students to write self-coded MCMC algorithms for relatively simple multi-parameter models.
+
+- If the course puts equal emphasis on computing and modeling, consider adopting one of the popular probabilistic programming languages for Bayesian model estimation through MCMC.
+
+- If the course has a slightly stronger emphasis on modeling over computing, consider introducing one of the wrapper packages for Stan for its simpler posterior summary procedure.
+
+# Example 
+
+## 
+
+:::{.pull-left}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: a hex shaped logo with shiny green-pink disco ball and purple starry background. There is text that says Bayes Rules!
+#| fig-width: 5
+knitr::include_graphics("img/bayes-rules-hex.png")
+```
+
+:::
+
+:::{.pull-right}
+
+<br>
+<br>
+
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+<i class="fas fa-book fa-2x" aria-hidden="true" title="Book icon"></i> Johnson, A. A., Otts, M. & Dogucu, M. (2022) [Bayes Rules! An Introduction to Applied Bayesian Modeling](https://bayesrulesbook.com)
+
+
+<i class="fab fa-r-project fa-2x" aria-hidden="true" title="R logo"></i> [{bayesrules}](https://www.github.com/bayes-rules/bayesrules)
+
+:::
+
+
+##
+
+:::{.panel-tabset}
+
+
+
+## Bayesian Foundations
+
+:::{.pull-left}
+Bayes' Rule
+
+The Beta-Binomial Bayesian Model
+
+Balance and Sequentiality in Bayesian Analysis
+
+Conjugate Families
+
+:::
+
+:::{.pull-right}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: three curves on a single plot with no axis labeled. It is coloring scheme indicates its similarity to the previous plot with prior, scaled likelihood and posterior
+plot_beta_binomial(1, 4, 13, 28) +
+  theme(panel.grid = element_blank(),
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "none") 
+```
+
+:::
+
+## Posterior Simulation & Analysis
+
+:::{.pull-left}
+Grid Approximation
+
+The Metropolis-Hastings Algorithm
+
+Posterior Estimation
+
+Posterior Hypothesis Testing
+
+Posterior Prediction
+:::
+
+:::{.pull-right}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: A traceplot with no axis labels. Traceplots have thin vertical lines with varying lengths.
+knitr::include_graphics("img/unit2.png")
+```
+
+:::
+
+## Regression and Classification
+
+
+:::{.pull-right}
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: A scatterplot with multiple regression lines passing through points. These regression lines are not all over the place, they are clustered with similar but varyin intercepts and slopes.
+knitr::include_graphics("img/unit3.png")
+```
+
+:::
+
+:::{.pull-left}
+
+Normal Regression
+
+Poisson and Negative Binomial Regression
+
+Logistic Regression
+
+Naive Bayes Classification
+
+:::
+
+## Hierarchical Models
+
+:::{.pull-left}
+
+Normal hierarchical models without predictors
+
+Normal hierarchical models with predictors
+
+Non-Normal Hierarchical Regression & Classification
+:::
+
+:::{.pull-right}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: a figure showing hierarchy with a rectangle on top. With a set of arrows pointing downwards leading to a set of rectangles below which also have a set of arrows pointing downwards leading to a different set of rectangles.
+knitr::include_graphics("img/unit4.png")
+```
+
+:::
+
+:::
+
+##
+
+```{r, echo=FALSE, message=FALSE}
+## Remove
+## Code for facet_wrapped Beta-Binomial plots
+### Plotting function
+beta_binom_grid_plot <- function(data, likelihood = FALSE, posterior = FALSE){
+  g <- ggplot(data, aes(x = pi, y = prior)) + 
+    geom_line() + 
+    geom_area(alpha = 0.5, aes(fill = "prior", x = pi, y = prior)) + 
+    scale_fill_manual("", values = c(prior = "#f0e442", 
+      `(scaled) likelihood` = "#0071b2", posterior = "#009e74"), breaks = c("prior", "(scaled) likelihood", "posterior")) + 
+    labs(x = expression(pi), y = "density") + 
+    theme(legend.position="bottom")
+  
+  if(likelihood == TRUE){
+    g <- g + 
+      geom_line(aes(x = pi, y = likelihood)) + 
+      geom_area(alpha = 0.5, aes(fill = "(scaled) likelihood", x = pi, y = likelihood))
+  }
+  
+  if(posterior == TRUE){
+    g <- g + 
+      geom_line(aes(x = pi, y = posterior)) + 
+      geom_area(alpha = 0.5, aes(fill = "posterior", x = pi, y = posterior)) 
+  }
+  g
+}
+make_plot_data <- function(as, bs, xs, ns, labs_prior, labs_likelihood){
+  ### Set up data to call in plot
+  # Refinement parameter
+  size <- 250
+  
+  # Model settings
+  pi <- rep(seq(0,1,length=size), 9)
+  
+  # Prior parameters
+  a <- rep(as, each = size*3)
+  b <- rep(bs, each = size*3)
+  # Data
+  x <- rep(rep(xs, each = size), 3)
+  n <- rep(rep(ns, each = size), 3)
+  # Posterior parameters
+  a_post <- x + a
+  b_post <- n - x + b
+  # Labels
+  setting_prior      <- as.factor(rep(1:3, each = size*3))
+  setting_likelihood <- as.factor(rep(rep(1:3, each = size), 3))
+  levels(setting_prior)      <- labs_prior
+  levels(setting_likelihood) <- labs_likelihood    
+  # Prior, likelihood, posterior functions
+  bfun1 <- function(x){dbinom(x = xs[1], size = ns[1], prob = x)}
+  bfun2 <- function(x){dbinom(x = xs[2], size = ns[2], prob = x)}
+  bfun3 <- function(x){dbinom(x = xs[3], size = ns[3], prob = x)}
+  scale   <- rep(rep(c(integrate(bfun1, 0, 1)[[1]], integrate(bfun2, 0, 1)[[1]], integrate(bfun3, 0, 1)[[1]]), each = size), 3)
+  prior      <- dbeta(x = pi, shape1 = a, shape2 = b)
+  likelihood <- dbinom(x = x, size = n, prob = pi) / scale
+  posterior  <- dbeta(x = pi, shape1 = a_post, shape2 = b_post)
+  # Combine into data frame
+  data.frame(setting_prior, setting_likelihood, pi, a, b, x, n, likelihood, prior, posterior)
+}
+plot_dat <- make_plot_data(
+  as = c(5,1,14), bs = c(11,1,1), 
+  xs = c(6,29,46), ns = c(13,63,99), 
+  labs_prior = c("prior: Beta(5,11)", "prior: Beta(1,1)", "prior: Beta(14,1)"), 
+  labs_likelihood = c("data: Y = 6 of n = 13", "data: Y = 29 of n = 63", "data: Y = 46 of n = 99"))
+```
+
+
+```{r echo = FALSE, fig.align='center'}
+plot_dat_new <- plot_dat %>% 
+  mutate(setting_prior = factor(setting_prior, 
+                                levels = c("prior: Beta(14,1)", "prior: Beta(5,11)", "prior: Beta(1,1)")))
+beta_binom_grid_plot(plot_dat_new, posterior = TRUE, likelihood = TRUE) + 
+  facet_grid(setting_prior ~ setting_likelihood) +
+  theme(text = element_text(size=17)) 
+```
+
+. . .
+
+[Dogucu, M. & Johnson A. (2022) Supporting Bayesian Modeling with Visualizations. In S. Peters (Ed) Proceedings of the 11th International Conference on Teaching Statistics. Rosario, Argentina.](https://iase-web.org/icots/11/proceedings/pdfs/ICOTS11_222_DOGUCU.pdf?1669865538)
+
+##
+
+```{r}
+#| echo: true
+one_mh_iteration <- function(w, current){
+ # STEP 1: Propose the next chain location
+ proposal <- runif(1, min = current - w, max = current + w)
+  
+ # STEP 2: Decide whether or not to go there
+ proposal_plaus <- dnorm(proposal, 0, 1) * dnorm(6.25, proposal, 0.75)
+ current_plaus  <- dnorm(current, 0, 1) * dnorm(6.25, current, 0.75)
+ alpha <- min(1, proposal_plaus / current_plaus)
+ next_stop <- sample(c(proposal, current), 
+  size = 1, prob = c(alpha, 1-alpha))
+  
+ # Return the results
+ return(data.frame(proposal, alpha, next_stop))
+}
+```
+
+##
+
+
+
+```{r}
+#| echo: true
+#| cache: true
+mh_tour <- function(N, w){
+  # 1. Start the chain at location 3
+  current <- 3
+  # 2. Initialize the simulation
+  mu <- rep(0, N)
+  # 3. Simulate N Markov chain stops
+  for(i in 1:N){    
+    # Simulate one iteration
+    sim <- one_mh_iteration(w = w, current = current)
+    
+    # Record next location
+    mu[i] <- sim$next_stop
+    
+    # Reset the current location
+    current <- sim$next_stop
+  }
+  
+  # 4. Return the chain locations
+  return(data.frame(iteration = c(1:N), mu))
+}
+```
+
+##
+
+```{r}
+#| cache: true
+#| warning: false
+#| echo: true
+set.seed(84735)
+mh_simulation_1 <- mh_tour(N = 5000, w = 1)
+```
+
+
+:::{.pull-left}
+
+```{r echo=FALSE, , fig.height=5, warning=FALSE}
+ggplot(mh_simulation_1, aes(x = mu)) + 
+  geom_histogram(aes(y = ..density..), color = "white", bins = 20) + 
+  stat_function(fun = dnorm, args = list(4,0.6), color = "red")
+```
+:::
+
+:::{.pull-right}
+
+
+```{r echo=FALSE, fig.height=5}
+ggplot(mh_simulation_1, aes(x = iteration, y = mu)) + 
+  geom_line()
+```
+:::
+
+## Resources
+
+[Undergraduate Bayesian Education Resources](https://undergrad-bayes.netlify.app/)
+
+. . .
+
+[Undergraduate Bayesian Education Network](https://undergrad-bayes.netlify.app/network)
+
+. . .
+
+[STATS 115 at University of California Irvine](https://www.stats115.com/)
+
+. . .
+
+[Bayes BATS for Advancing Bayesian Thinking in STEM](https://www.stat.uci.edu/bayes-bats/) 
+
+
+## Acknowledgments
+
+```{r}
+#| echo: false
+knitr::include_graphics("img/nsf-logo.png")
+```
+
+
+
+
+:::{.pull-right}
+
+<br>
+
+Supported by NSF HDR DSC award #2123366
+
+Supported by NSF IUSE: EHR program with award #2215879
+
+:::
 
 ## QUESTIONS?
-`r fontawesome::fa(name = "link")`
-<a href = "http://minedogucu.com">minedogucu.com</a>  
+
+```{r}
+
+```
+
+
+`r fontawesome::fa(name = "link")` <a href = "http://minedogucu.com">minedogucu.com</a>  
 `r fontawesome::fa(name = "github")` <a href = "http://github.com/mdogucu">mdogucu</a>   
 `r fontawesome::fa(name = "twitter")` <a href = "http://twitter.com/MineDogucu">MineDogucu</a>  
 `r fontawesome::fa(name = "mastodon")` <a href = "https://mastodon.social/@MineDogucu">mastodon.social/@MineDogucu</a>  
