@@ -2,7 +2,7 @@
 
 Talk by [Mine Dogucu](https://www.minedogucu.com/) given at Royal Statical Society Teaching Statistics SIG event at TALMO on 2024-03-27
 
-Slides of the talk can be accessed online at [mdogucu.github.io/XXXX](https://mdogucu.github.io/talmo-24)
+Slides of the talk can be accessed online at [mdogucu.github.io/talmo-24](https://mdogucu.github.io/talmo-24)
 
 ## Abstract
 
