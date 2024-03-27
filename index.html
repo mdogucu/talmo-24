@@ -630,96 +630,12 @@ Mine Dogucu <br> University of California Irvine
 </section>
 <section id="section-5" class="slide level2">
 <h2></h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Bayesian Foundations</a></li><li><a href="#tabset-1-2">Posterior Simulation &amp; Analysis</a></li><li><a href="#tabset-1-3">Regression and Classification</a></li><li><a href="#tabset-1-4">Hierarchical Models</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="pull-left">
-<p>Bayes’ Rule</p>
-<p>The Beta-Binomial Bayesian Model</p>
-<p>Balance and Sequentiality in Bayesian Analysis</p>
-<p>Conjugate Families</p>
-</div>
-<div class="pull-right">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" alt="three curves on a single plot with no axis labeled. It is coloring scheme indicates its similarity to the previous plot with prior, scaled likelihood and posterior" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="pull-left">
-<p>Grid Approximation</p>
-<p>The Metropolis-Hastings Algorithm</p>
-<p>Posterior Estimation</p>
-<p>Posterior Hypothesis Testing</p>
-<p>Posterior Prediction</p>
-</div>
-<div class="pull-right">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/unit2.png" alt="A traceplot with no axis labels. Traceplots have thin vertical lines with varying lengths." width="237"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-1-3">
-<div class="pull-right">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/unit3.png" alt="A scatterplot with multiple regression lines passing through points. These regression lines are not all over the place, they are clustered with similar but varyin intercepts and slopes." width="236"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="pull-left">
-<p>Normal Regression</p>
-<p>Poisson and Negative Binomial Regression</p>
-<p>Logistic Regression</p>
-<p>Naive Bayes Classification</p>
-</div>
-</div>
-<div id="tabset-1-4">
-<div class="pull-left">
-<p>Normal hierarchical models without predictors</p>
-<p>Normal hierarchical models with predictors</p>
-<p>Non-Normal Hierarchical Regression &amp; Classification</p>
-</div>
-<div class="pull-right">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/unit4.png" alt="a figure showing hierarchy with a rectangle on top. With a set of arrows pointing downwards leading to a set of rectangles below which also have a set of arrows pointing downwards leading to a different set of rectangles." width="234"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch quarto-figure-center"><div class="fragment">
+<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch quarto-figure-center"><div class="fragment">
 <p><a href="https://iase-web.org/icots/11/proceedings/pdfs/ICOTS11_222_DOGUCU.pdf?1669865538">Dogucu, M. &amp; Johnson A. (2022) Supporting Bayesian Modeling with Visualizations. In S. Peters (Ed) Proceedings of the 11th International Conference on Teaching Statistics. Rosario, Argentina.</a></p>
 </div>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>one_mh_iteration <span class="ot">&lt;-</span> <span class="cf">function</span>(w, current){</span>
@@ -738,9 +654,9 @@ Mine Dogucu <br> University of California Irvine
 <span id="cb1-14"><a href="#cb1-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-15_d42415d5ccaa80d38275261388f65ba1">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-11_ea17595b0fce823ba19569916ba7ac67">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mh_tour <span class="ot">&lt;-</span> <span class="cf">function</span>(N, w){</span>
 <span id="cb2-2"><a href="#cb2-2"></a>  <span class="co"># 1. Start the chain at location 3</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>  current <span class="ot">&lt;-</span> <span class="dv">3</span></span>
@@ -763,23 +679,23 @@ Mine Dogucu <br> University of California Irvine
 <span id="cb2-20"><a href="#cb2-20"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-16_34f340808246f805cbc5db2351b3c7d7">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-12_15e710f1df2f22009401c8d98fedc28a">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">set.seed</span>(<span class="dv">84735</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>mh_simulation_1 <span class="ot">&lt;-</span> <span class="fu">mh_tour</span>(<span class="at">N =</span> <span class="dv">5000</span>, <span class="at">w =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="pull-left">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </div>
 </div>
 </div>
 <div class="pull-right">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </div>
 </div>
 </div>
