@@ -18,13 +18,6 @@ library(tidyverse)
 library(bayesrules)
 ```
 
-## Outline
-
-- Why?
-- Research Study
-- Recommendations
-- Example 
-- Resources
 
 # Why?
 
